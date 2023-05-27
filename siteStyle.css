@@ -11,8 +11,24 @@ html, body {
 #heading {
     font-family: "Palatino Linotype", serif;
     font-size: 24px;
-    color: aliceblue;
+    color: #FFFDD0;  /* Cream */
     margin-top: 20px; /* Adjust the value as needed */
     text-align: center;
     background-color: transparent;
+}
+
+#heading h2 {
+      text-shadow: 
+    3px 3px 0 #800000, 
+    -3px -3px 0 #800000, 
+    3px -3px 0 #800000, 
+    -3px 3px 0 #800000, 
+    3px 0px 0 #800000, 
+    0px 3px 0 #800000,
+    -3px 0px 0 #800000,
+    0px -3px 0 #800000,
+    0 0 10px #800000, 
+    0 0 20px #800000, 
+    0 0 30px #800000, 
+    0 0 40px #800000;
 }
