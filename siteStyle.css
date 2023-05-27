@@ -1,11 +1,26 @@
 @charset "utf-8";
 
-html, body {
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
     margin: 0;
     padding: 0;
     background-image: url('./red_clouds.png');
     background-size: cover;
     background-position: center;
+	background-color: #611024;
+	opacity: 0;
+  	transition: opacity 0.5s ease-in; /* This will make your content fade in smoothly over 0.5 seconds. Adjust the time as needed. */
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 #heading {
