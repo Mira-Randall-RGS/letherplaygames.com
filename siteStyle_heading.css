@@ -1,0 +1,8 @@
+@charset "utf-8";
+#heading {
+  font-family: "Palatino Linotype", serif;
+  font-size: 24px;
+  color: #190101;
+  margin-top: -40px; /* Adjust the value as needed */
+  text-align: center;
+}
