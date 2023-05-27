@@ -3,7 +3,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-image: url('./_red.png');
+    background-image: url('./red_clouds.png');
     background-size: cover;
     background-position: center;
 }
