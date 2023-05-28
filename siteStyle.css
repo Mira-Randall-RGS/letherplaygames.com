@@ -8,26 +8,57 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url('./red_clouds.png');
     background-size: cover;
     background-position: center;
 	background-color: #611024;
-	opacity: 0;
-  	transition: opacity 0.5s ease-in; /* This will make your content fade in smoothly over 0.5 seconds. Adjust the time as needed. */
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    z-index: -1; /* This makes sure the image stays behind your content */
 }
 
-body.loaded {
+body.loaded::before {
   opacity: 1;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#scrolling-border {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-image: url('palm-mini_w.png');
+    background-size: auto 60px;
+    background-repeat: repeat-x;
+    animation: scroll 2.5s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        background-position: 0, 0;
+    }
+    100% {
+        background-position: 57px, 0;
+    }
+}
+
+/* ... rest of your code ... */
 
 #heading {
     font-family: "Palatino Linotype", serif;
     font-size: 24px;
     color: #FFFDD0;  /* Cream */
-    margin-top: 20px; /* Adjust the value as needed */
+    margin-top: 16px; /* Adjust the value as needed */
     text-align: center;
     background-color: transparent;
 }
