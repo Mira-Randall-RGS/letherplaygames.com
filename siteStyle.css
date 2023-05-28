@@ -17,7 +17,7 @@ body::before {
     left: 0;
     background-image: url('./red_clouds.png');
     background-size: cover;
-    background-position: center;
+    background-position: top;
 	background-color: #611024;
     opacity: 0;
     transition: opacity 0.5s ease-in;
@@ -31,8 +31,10 @@ body.loaded::before {
 body {
     margin: 0;
     padding: 0;
+    background-color: #611024;
 }
 
+/* This is your default scrolling border class */
 #scrolling-border {
     position: relative;
     height: 60px;
@@ -40,15 +42,37 @@ body {
     background-image: url('palm-mini_w.png');
     background-size: auto 60px;
     background-repeat: repeat-x;
-    animation: scroll 2.5s linear infinite;
 }
 
-@keyframes scroll {
+/* This is the animation class for left scrolling */
+#scrolling-border.scroll-left {
+    animation: scroll-left 2.5s linear infinite;
+}
+
+@keyframes scroll-left {
     0% {
-        background-position: 0, 0;
+        background-position: 57px, 0;
+        animation-timing-function: linear;
     }
     100% {
-        background-position: 57px, 0;
+        background-position: 0, 0;
+        animation-timing-function: linear;
+    }
+}
+
+/* This is the animation class for right scrolling */
+#scrolling-border.scroll-right {
+    animation: scroll-right 2.5s linear infinite;
+}
+
+@keyframes scroll-right {
+    0% {
+        background-position: -57px, 0;
+        animation-timing-function: linear;
+    }
+    100% {
+        background-position: 0, 0;
+        animation-timing-function: linear;
     }
 }
 
@@ -101,4 +125,10 @@ body {
 
 .navbar li a:hover {
     background-color: #111;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
